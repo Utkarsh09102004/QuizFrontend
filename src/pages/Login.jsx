@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState } from "react";
+import api from "../api";
 
 import { useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
@@ -46,6 +47,7 @@ function Login({ route}) {
           setError('Hatt lodu');
       } else {
           setError('An error occurred. Please try again later.');
+          console.log('Error:', error);
       }
   
     } finally {

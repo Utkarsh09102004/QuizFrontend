@@ -8,13 +8,8 @@ import {
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-const QuestionForm = ({ index, handleChange, handleRemove }) => {
-  const [formData, setFormData] = useState({
-    question_text: '',
-    options: '',
-    correct_answer: '',
-    time_needed: '',
-  });
+const QuestionForm = ({ index, handleChange, handleRemove,data }) => {
+  const [formData, setFormData] = useState(data);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
